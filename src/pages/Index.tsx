@@ -1,12 +1,41 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import React, { useState, useEffect } from 'react';
+import Navigation from '@/components/Navigation';
+import Loader from '@/components/Loader';
+import Dashboard from '@/components/Dashboard';
+import CarbonMetrics from '@/components/CarbonMetrics';
+import ProductShowcase from '@/components/ProductShowcase';
+import BrandKits from '@/components/BrandKits';
+import CompanyLogos from '@/components/CompanyLogos';
 
 const Index = () => {
+  const [isDark, setIsDark] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  const toggleTheme = () => {
+    setIsDark(!isDark);
+  };
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className={`min-h-screen transition-colors duration-500 ${isDark ? 'bg-black' : 'bg-white'}`}>
+      <Navigation isDark={isDark} toggleTheme={toggleTheme} />
+      <Dashboard isDark={isDark} />
+      <CarbonMetrics isDark={isDark} />
+      <ProductShowcase isDark={isDark} />
+      <BrandKits isDark={isDark} />
+      <CompanyLogos isDark={isDark} />
     </div>
   );
 };
