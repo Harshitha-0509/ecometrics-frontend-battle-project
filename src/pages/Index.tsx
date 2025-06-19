@@ -10,12 +10,14 @@ import ProductShowcase from '@/components/ProductShowcase';
 import BrandKits from '@/components/BrandKits';
 import CompanyLogos from '@/components/CompanyLogos';
 import ProgressSection from '@/components/ProgressSection';
-import LusionSection from '@/components/LusionSection';
 import ConnectionSection from '@/components/ConnectionSection';
 import HappySellersSection from '@/components/HappySellersSection';
 import PricingSection from '@/components/PricingSection';
 import AboutSection from '@/components/AboutSection';
 import BackgroundRipples from '@/components/BackgroundRipples';
+import ScrollAnimations from '@/components/ScrollAnimations';
+import CreativeBackground from '@/components/CreativeBackground';
+import AnimatedSection from '@/components/AnimatedSection';
 
 const Index = () => {
   const [isDark, setIsDark] = useState(true);
@@ -38,23 +40,65 @@ const Index = () => {
   }
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 relative ${isDark ? 'bg-black' : 'bg-white'}`}>
+    <div className={`min-h-screen transition-all duration-500 relative overflow-x-hidden ${
+      isDark 
+        ? 'bg-gradient-to-br from-gray-900 via-black to-gray-800' 
+        : 'bg-gradient-to-br from-white via-gray-50 to-blue-50'
+    }`}>
+      <CreativeBackground isDark={isDark} />
+      <ScrollAnimations />
       <BackgroundRipples isDark={isDark} />
+      
       <div className="relative z-10">
         <Navigation isDark={isDark} toggleTheme={toggleTheme} />
-        <Dashboard isDark={isDark} />
-        <CarbonMetrics isDark={isDark} />
-        <BSSCapabilities isDark={isDark} />
-        <AnalyticsShowcase isDark={isDark} />
-        <ProgressSection isDark={isDark} />
-        <ConnectionSection isDark={isDark} />
-        <HappySellersSection isDark={isDark} />
-        <PricingSection isDark={isDark} />
-        <ProductShowcase isDark={isDark} />
-        <BrandKits isDark={isDark} />
-        <AboutSection isDark={isDark} />
-        <LusionSection isDark={isDark} />
-        <CompanyLogos isDark={isDark} />
+        
+        <AnimatedSection animation="fadeUp">
+          <Dashboard isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeLeft" delay={200}>
+          <CarbonMetrics isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeRight" delay={300}>
+          <BSSCapabilities isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="scale" delay={400}>
+          <AnalyticsShowcase isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeUp" delay={500}>
+          <ProgressSection isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeLeft" delay={600}>
+          <ConnectionSection isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeRight" delay={700}>
+          <HappySellersSection isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="scale" delay={800}>
+          <PricingSection isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeUp" delay={900}>
+          <ProductShowcase isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeLeft" delay={1000}>
+          <BrandKits isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="fadeRight" delay={1100}>
+          <AboutSection isDark={isDark} />
+        </AnimatedSection>
+        
+        <AnimatedSection animation="scale" delay={1200}>
+          <CompanyLogos isDark={isDark} />
+        </AnimatedSection>
       </div>
     </div>
   );
