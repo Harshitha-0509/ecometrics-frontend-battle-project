@@ -4,6 +4,8 @@ import Navigation from '@/components/Navigation';
 import Loader from '@/components/Loader';
 import Dashboard from '@/components/Dashboard';
 import CarbonMetrics from '@/components/CarbonMetrics';
+import BSSCapabilities from '@/components/BSSCapabilities';
+import AnalyticsShowcase from '@/components/AnalyticsShowcase';
 import ProductShowcase from '@/components/ProductShowcase';
 import BrandKits from '@/components/BrandKits';
 import CompanyLogos from '@/components/CompanyLogos';
@@ -33,6 +35,8 @@ const Index = () => {
       <Navigation isDark={isDark} toggleTheme={toggleTheme} />
       <Dashboard isDark={isDark} />
       <CarbonMetrics isDark={isDark} />
+      <BSSCapabilities isDark={isDark} />
+      <AnalyticsShowcase isDark={isDark} />
       <ProductShowcase isDark={isDark} />
       <BrandKits isDark={isDark} />
       <CompanyLogos isDark={isDark} />

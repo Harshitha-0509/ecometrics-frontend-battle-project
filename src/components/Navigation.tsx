@@ -14,6 +14,8 @@ const Navigation = ({ isDark, toggleTheme }: NavigationProps) => {
   const navItems = [
     { name: 'Dashboard', href: '#dashboard' },
     { name: 'Metrics', href: '#metrics' },
+    { name: 'Capabilities', href: '#capabilities' },
+    { name: 'Analytics', href: '#analytics' },
     { name: 'Products', href: '#products' },
     { name: 'Brands', href: '#brands' },
     { name: 'Partners', href: '#partners' }
