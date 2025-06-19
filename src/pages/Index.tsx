@@ -9,6 +9,8 @@ import AnalyticsShowcase from '@/components/AnalyticsShowcase';
 import ProductShowcase from '@/components/ProductShowcase';
 import BrandKits from '@/components/BrandKits';
 import CompanyLogos from '@/components/CompanyLogos';
+import ProgressSection from '@/components/ProgressSection';
+import LusionSection from '@/components/LusionSection';
 
 const Index = () => {
   const [isDark, setIsDark] = useState(true);
@@ -17,7 +19,7 @@ const Index = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 2500);
+    }, 3000); // Increased to 3 seconds to show the enhanced loader
 
     return () => clearTimeout(timer);
   }, []);
@@ -37,8 +39,10 @@ const Index = () => {
       <CarbonMetrics isDark={isDark} />
       <BSSCapabilities isDark={isDark} />
       <AnalyticsShowcase isDark={isDark} />
+      <ProgressSection isDark={isDark} />
       <ProductShowcase isDark={isDark} />
       <BrandKits isDark={isDark} />
+      <LusionSection isDark={isDark} />
       <CompanyLogos isDark={isDark} />
     </div>
   );

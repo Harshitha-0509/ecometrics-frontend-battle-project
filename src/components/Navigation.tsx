@@ -16,8 +16,10 @@ const Navigation = ({ isDark, toggleTheme }: NavigationProps) => {
     { name: 'Metrics', href: '#metrics' },
     { name: 'Capabilities', href: '#capabilities' },
     { name: 'Analytics', href: '#analytics' },
+    { name: 'Performance', href: '#performance' },
     { name: 'Products', href: '#products' },
     { name: 'Brands', href: '#brands' },
+    { name: 'Lusion', href: '#lusion' },
     { name: 'Partners', href: '#partners' }
   ];
 
