@@ -1,5 +1,4 @@
-Welcome to my Lovable Project
-Live Preview: lovable.dev/projects/94432f6d-a79c-453b-8117-4abd75558032
+Welcome to my Project
 
 📌 Project Overview
 This project was built as part of the Frontend Battle competition. It combines modern frontend tools and best practices to deliver a responsive, scalable, and beautifully styled application.
