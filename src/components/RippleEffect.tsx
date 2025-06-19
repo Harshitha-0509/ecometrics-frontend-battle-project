@@ -56,7 +56,7 @@ const RippleEffect = ({ isDark }: RippleEffectProps) => {
         </p>
       </div>
       
-      <style jsx>{`
+      <style>{`
         @keyframes rippleExpand {
           0% {
             transform: scale(0);

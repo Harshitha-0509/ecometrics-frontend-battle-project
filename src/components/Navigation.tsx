@@ -17,8 +17,12 @@ const Navigation = ({ isDark, toggleTheme }: NavigationProps) => {
     { name: 'Capabilities', href: '#capabilities' },
     { name: 'Analytics', href: '#analytics' },
     { name: 'Performance', href: '#performance' },
+    { name: 'Connection', href: '#connection' },
+    { name: 'Testimonials', href: '#happy-sellers' },
+    { name: 'Pricing', href: '#pricing' },
     { name: 'Products', href: '#products' },
     { name: 'Brands', href: '#brands' },
+    { name: 'About', href: '#about' },
     { name: 'Lusion', href: '#lusion' },
     { name: 'Partners', href: '#partners' }
   ];

@@ -39,7 +39,7 @@ const Loader = () => {
         <p className="text-white text-lg font-light">Loading Experience...</p>
       </div>
 
-      <style jsx>{`
+      <style>{`
         @keyframes ripple {
           0% {
             transform: translate(-50%, -50%) scale(0);
